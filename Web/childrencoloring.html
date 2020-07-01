@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head Lang="en">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="canvas.js"></script>
+    <title>Children Coloring</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-light bg-dark justify-content-between">
+        <a class="navbar-brand" style="color: aliceblue;font-size: 20px;">
+            <b style="font-style: italic;">Children Coloring</b>
+        </a>
+        <a style="color: aliceblue;"><b>Công Cụ</b></a>
+    </nav>
+
+    <div class="row">
+        <div class="col-10" >
+            <canvas id="canvas" width="500" height="500" style ="position:absolute; left: 0; top: 0; z-index: 2; background-color: transparent; border: 2px solid black;"></canvas>
+            <canvas id="canvas1" width="500" height="500" style ="position:absolute; left: 0; top: 0; z-index: 1; background-color: transparent"></canvas>
+            <canvas id="canvasbg" width="500" height="500" style ="position:absolute; left: 0; top: 0; z-index: 0; background-color: transparent"></canvas>
+        </div>
+
+        <div class="col-2">
+            <div style="display: inline;"> 
+                <b style="margin-top: 2px; float: top; margin-bottom: 2px;">Kích cỡ cọ: <span id="value"></span> px</b>
+                <input id="BrushSize" type="range" min="1" max="100" value ="1" style="width: 200px;"/>
+
+                <b style="margin-top: 2px; float: top; margin-bottom: 2px;">Chọn màu:</b>
+                <input name="Color Picker" type="color" id="ColorPicker" style="width: 200px;"/>
+
+                <b style="margin-top: 2px; float: top; margin-bottom: 2px;">Chọn hình:</b>
+                <button id="ImagePicker" style="width: 200px;"/>A</button>
+
+                <button id="btn_clear" style="width: 200px;">Xóa</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
